@@ -8,6 +8,32 @@
    
 </head>
 
+   <script type="text/javascript">
+         let homeA = "1 Main St.";
+         let homeC = "Sicilia";
+         let homeS = "MA";
+         let homeZ = "02103";
+         let workA = "15 Columbine Ln.";
+         let workC = "Crab City";
+         let workS = "MA";
+         let workZ= "02104";
+
+         function homeValues(){
+            document.getElementById("streetinput").value = homeA;
+            document.getElementById("cityinput").value = homeC;
+            document.getElementById("stateinput").value = homeS;
+            document.getElementById("zipinput").value = homeZ;
+         }
+         function workValues(){
+            document.getElementById("streetinput").value = workA;
+            document.getElementById("cityinput").value = workC;
+            document.getElementById("stateinput").value = workS;
+            document.getElementById("zipinput").value = workZ;
+         }
+         
+   </script>
+
+
 <body>
    <header>
       <h1>
@@ -24,7 +50,7 @@
                <span>Home</span><br/>
                1 Main St.<br />
                Sicilia, MA 02103
-               <input type="radio" id="homeoption" name="shippingaddr">
+               <input type="radio" id="homeoption" name="shippingaddr" onclick="homeValues()">
 					  
 			
             </label>
@@ -32,8 +58,9 @@
                <span>Work</span><br/>
                15 Columbine Ln.<br />
                Crab City, MA 02104
-               <input type="radio" id="workoption" name="shippingaddr" />
+               <input type="radio" id="workoption" name="shippingaddr" onclick="workValues()">
             </label>
+            
          </fieldset>
           <fieldset id="contactinfo">
             <label for="streetinput">
